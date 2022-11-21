@@ -1,4 +1,6 @@
-numpy==1.23.3
+numpy==1.23.4
 ipykernel==6.16.0
-matplotlib==3.6.1
-numba==0.56.2
+matplotlib==3.5.3
+numba==0.56.3
+cuda-python==11.7.1
+mpi4py==3.1.4
