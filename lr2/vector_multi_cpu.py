@@ -11,7 +11,11 @@ current_rank = comm.Get_rank()
 p = comm.Get_size()
 
 vec_size = VEC_SIZE
-vec = get_vector(vec_size=vec_size)
+vec = None
+if current_rank == 0:
+    vec = get_vector(vec_size=vec_size)
+
+vec = comm.bcast(vec)
 
 total_sum = -1.0
 arr_portion = ceil(vec_size / p)
